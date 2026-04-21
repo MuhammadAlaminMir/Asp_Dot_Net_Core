@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="1_HTTP/1_HTTP.csproj" />
+  <Project Path="2_Middleware/2_Middleware.csproj" />
+  <Project Path="3_Routing/3_Routing.csproj" />
+</Solution>
