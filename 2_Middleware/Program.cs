@@ -2,7 +2,11 @@ using _2_Middleware.CustomMiddleware;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+// we have to register the custom middleware in the dependency injection container before we can use it in the pipeline. This is done using the AddTransient method, which registers the middleware as a transient service. This means that a new instance of the middleware will be created for each request. If you want to use a different lifetime, such as singleton or scoped, you can use the corresponding methods (AddSingleton or AddScoped) instead.
+// and for the conventional middleware, we don't need to register it in the dependency injection container because it is not implemented as a class that implements the IMiddleware interface. Instead, it is implemented as a class with an Invoke method, which is called directly by the UseMiddleware extension method when it is added to the pipeline.
 builder.Services.AddTransient<MyCustomMiddleware>();
+
 var app = builder.Build();
 
 // Middlewares are executed in the order they are added to the pipeline. So, the order of middleware is important. The first middleware added will be the first one to process the request and the last one to process the response.
