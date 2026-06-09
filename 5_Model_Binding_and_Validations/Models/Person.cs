@@ -1,4 +1,5 @@
 ﻿using _5_Model_Binding_and_Validations.CustomValidator;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using System.ComponentModel.DataAnnotations;
 
@@ -40,8 +41,9 @@ namespace _5_Model_Binding_and_Validations.Models
 
         [Url(ErrorMessage = "{0} should be a valid URL")]
         public string? GithubLink { get; set; }
-        
 
+        //Bind Never Attribute make sure, even if the controller got the input, it don't bind that input with this model property
+        [BindNever]
         public string GirlFriend { get; set; }
 
         [CheckRelationshipStatus("GirlFriend", ErrorMessage = "You haven't fulfilled your Promise")]
