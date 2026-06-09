@@ -2,4 +2,6 @@
   <Project Path="1_HTTP/1_HTTP.csproj" />
   <Project Path="2_Middleware/2_Middleware.csproj" />
   <Project Path="3_Routing/3_Routing.csproj" />
+  <Project Path="4_Controllers/4_Controllers.csproj" Id="a5582977-3093-4e89-83eb-d984938066e9" />
+  <Project Path="5_Model_Binding_and_Validations/5_Model_Binding_and_Validations.csproj" Id="750e6e1e-b755-4289-899c-b8a4f41aaa41" />
 </Solution>
