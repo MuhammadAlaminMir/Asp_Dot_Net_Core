@@ -1,0 +1,97 @@
+﻿@using Razor_Views.Models
+@*
+
+*@
+@{
+    
+    List<Person>? peoples = (List<Person>)ViewData["peoples"];
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["appTitle"]</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hare we are practicing Razor Views </h1>
+    </header>
+
+    <main>
+        <section>
+           
+            <h2>Now we will practice ForEach in Razor</h2>
+            @* @foreach (var person in peoples)
+            {
+                <div>
+                    <h3>@person.Name</h3>
+                    <p>Date of Birth: @person.dateOfBirth?.ToShortDateString()</p>
+                    <p>Age: @person.Age</p>
+                </div>
+            }
+
+            <hr />  *@
+
+           
+
+            @* @for (int i = 0; i <= 5; i++)
+            {
+
+                <!-- we can write static text like this inside loop -->
+                <text> You can also use for loop to run a specific number of time</text>
+                <!-- this is also static text-->
+                @: Hey this also static text;
+
+
+                <p> see, i can do it</p>
+            } *@
+        </section>
+
+
+        <section>
+            <!-- We can also create local function which we can use to that entire view, if you add local functions after at the rate, then it will become a method -->
+
+            @functions{
+                double? GetAge(DateTime? dateOfBirth)
+                {
+                    if (dateOfBirth is not null)
+                    {
+                        return Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365);
+                        }
+                    return null;
+                    }
+            }
+
+            @foreach (var person in peoples)
+            {
+                <div>
+                    <h3>@person.Name</h3>
+                    <p>Date of Birth: @person.dateOfBirth?.ToShortDateString()</p>
+                    <p>Age: @GetAge(person.dateOfBirth) years old</p>
+                </div>
+            }
+
+            <hr /> 
+           
+            @{
+                // we can store html / js code in a variable, and reuse it letter 
+                string alertMessege = $"<script> alert('{peoples.Count} peoples found')</script> ";
+            }
+
+            <!-- to use a variable with raw html/js code we have to use Html.Raw -->
+            @* @Html.Raw(alertMessege); *@
+
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Company Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

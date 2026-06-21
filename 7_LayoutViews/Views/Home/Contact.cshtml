@@ -1,0 +1,8 @@
+﻿@{
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+    // we have to set the layout here because we are not using the default _ViewStart.cshtml file in the Views folder. We could also create a _ViewStart.cshtml file in the Home folder and set the layout there, but for this example we will set it here.
+}
+
+<h2>Contact Us</h2>
+
+@await Component.InvokeAsync("Grid")

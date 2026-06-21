@@ -1,0 +1,18 @@
+﻿@{
+ 
+    ViewBag.Title = "About";
+}
+
+<h2>About Us</h2>
+
+<!-- there is another way to add partial view, we can use the Html.Partial method -->
+@* @await Html.PartialAsync("_ListPartialView") *@
+<!-- This is another way to render a partial view, it is an asynchronous method, it helps to improve the performance of the application -->
+
+<!-- also there is another way using the Html.RenderPartial method -->
+@{
+    // this must be inside a code block, because it returns void, so we cannot use it directly in the view
+    // this is a asynchronous method, It will send the output directly to the response stream, so it is more efficient than Html.PartialAsync, but it is not recommended to use it in Razor Pages, because it is not thread-safe and can cause issues in a multi-threaded environment.
+
+// await Html.RenderPartialAsync("_ListPartialView");
+}

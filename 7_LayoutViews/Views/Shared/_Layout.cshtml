@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+ 
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <navbar class="navbar w-75">
+            <div class="navbar-brand">My ASP.NET MVC App</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about-Company">About</a></li>
+                <li><a href="/contact-support">Contact</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/search-products">Search Products</a></li>
+                <li><a href="/order-products">Order Products</a></li>
+                <li><a href="/Programming-Languages">Programming Languages</a></li>
+            </ul>
+        </navbar>
+        
+    <div class="page-content">
+        @RenderBody()
+    </div>
+
+    <div class="footer-content"> 
+            @RenderSection("Footer", required: false)
+
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+   
+    <link rel="stylesheet" href="@(Url.Content("~/StyleSheet.css"))" />
+</head>
+<body>
+    <div class="flex full-size-height">
+        <div class="flex-1 grey-back">Sidebar</div>
+        <div class="flex-3 white-back">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="flex-1 grey-back">Sidebar</div>
+    <div class="footer-content">
+        @RenderSection("Footer", required: false)
+
+    </div>
+</body>
+</html>

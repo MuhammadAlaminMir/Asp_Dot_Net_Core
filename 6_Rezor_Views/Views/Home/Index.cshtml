@@ -1,0 +1,55 @@
+﻿
+@{
+    // This is the Razor view for the Home/Index action. It is rendered when the user navigates to the root URL of the application.
+    // this is C# code block, you can write C# code here to prepare data for the view or perform any necessary logic before rendering the HTML.
+    // I can also use Razor syntax to output dynamic content in the HTML below. For example, I could use @DateTime.Now to display the current date and time.
+
+    
+    // I am just practicing some C# code here, so not following any best practices, just want to see how it works in Razor view
+}
+
+@using Razor_Views.Models
+@{
+    Person person = new Person
+    {
+        Name = "John Doe",
+        dateOfBirth = new DateTime(1990, 1, 1)
+    };
+}
+
+
+
+<h1>Welcome @person.Name to ASP.NET Core MVC!</h1>
+
+<p> Today's Date @DateTime.Now </p>
+<p> your birth date is @person.dateOfBirth </p>
+@if (person.dateOfBirth.HasValue)
+{
+    person.Age = Math.Round((DateTime.Now - person.dateOfBirth).Value.TotalDays / 365);
+
+    <p> so your age is currently @person.Age years now </p>
+
+    
+}
+
+@switch (person.Age)
+{
+    case null : 
+        <p> age is not calculated yet </p>
+        break;
+    case < 18:
+        <p> you are a minor </p>
+        break;
+    case >= 18:
+        <p> you are an adult </p>
+        break;
+}
+
+
+<a href="/page"> go to page </a>
+<br />
+<br />
+<br />
+
+
+

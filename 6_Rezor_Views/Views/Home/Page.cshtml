@@ -1,0 +1,58 @@
+﻿
+@model IEnumerable<Person>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["appTitle"]</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-content">
+        <h1>Welcome</h1>
+        @{
+                // List<Person>? people = (List<Person>?)ViewData["peoples"];
+                // var people = ViewBag.peoples;
+
+            // viewBag is another property bag that can be used to pass data from the controller to the view. It is dynamic, which means you can add any property to it without having to define a class for it. However, it does not provide compile-time type checking, so you need to be careful when using it to avoid runtime errors.
+
+        }
+
+        @{
+            // we are using the model property to pass data from the controller to the view. The model is strongly typed, which means you need to define a class for it and specify the type of the model in the view. This provides compile-time type checking, which can help prevent errors and improve code readability.
+
+            // var people = Model;
+
+            // using var will give us some problems with intellisense, so we can use the explicit type instead of var to get better intellisense support in our code editor.
+            List<Person> people = Model.ToList();
+        }
+
+        @foreach (Person person in people)
+        {
+            <div class="box float-left w-75 text-center">
+                <a href="/person-details/@person.Name">
+                    <h3>@person.Name</h3>
+                </a>
+                <table class="table w-100">
+                    <tbody>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@person.PersonGender</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>@person.dateOfBirth.Value.ToString("MM/dd/yyyy")</td>
+                        </tr>
+                    </tbody>
+                   
+                </table>
+            </div>
+        }
+
+        <a href="/person-with-product/"> Go back to person with product</a>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿@{
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+
+    if(ViewBag.ProductId != null)
+    {
+        Layout = "~/Views/Shared/_Second_Layout.cshtml";
+    }
+}
+
+<h2>Search Products</h2>
+<p>Use the form below to search for products.</p>
+
+@section Footer {
+    <p>Home/search Footer</p>
+}

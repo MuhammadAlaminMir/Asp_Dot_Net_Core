@@ -1,0 +1,36 @@
+﻿@{
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "home";
+    ListModel listModel = new ListModel();
+    listModel.ListTitle = "Countries";
+    listModel.ListItems = new List<string>()
+    {
+        "Usa",
+        "Canada",
+        "Japan",
+        "Germany",
+        "Bangladesh"
+    };
+}
+
+<h1>Home/Index</h1>
+
+
+<!-- This is a tag helper for rendering a partial view -->
+<div class="box">
+<partial name="_ListPartialView" model="listModel"/>
+</div>
+<!-- Partial View helps to reuse HTML content across multiple views -->
+
+
+
+
+
+<!-- This is Section for Footer, This will be rendered in the footer section of the layout, it helps to add additional content to the layout -->
+
+@section Footer {
+    <p>Home/Index Footer</p>
+}
+
+
+

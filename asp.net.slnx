@@ -4,4 +4,6 @@
   <Project Path="3_Routing/3_Routing.csproj" />
   <Project Path="4_Controllers/4_Controllers.csproj" Id="a5582977-3093-4e89-83eb-d984938066e9" />
   <Project Path="5_Model_Binding_and_Validations/5_Model_Binding_and_Validations.csproj" Id="750e6e1e-b755-4289-899c-b8a4f41aaa41" />
+  <Project Path="6_Rezor_Views/6_Razor_Views.csproj" Id="38bc0a0a-42e3-47fb-a089-83c9742fc010" />
+  <Project Path="7_LayoutViews/7_LayoutViews_PartialView_ViewComponent.csproj" Id="1f63117e-817b-4209-aac4-7092df3ade96" />
 </Solution>

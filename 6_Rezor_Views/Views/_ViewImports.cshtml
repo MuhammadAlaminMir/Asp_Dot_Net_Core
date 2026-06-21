@@ -1,0 +1,15 @@
+﻿@using Razor_Views.Models
+@{
+    // This is the _ViewImports.cshtml file, which is used to import namespaces and other directives that will be available in all views in the application. This file is typically located in the Views folder of an ASP.NET Core MVC project.
+
+    // In this file, we are importing the Razor_Views.Models namespace, which contains the Person class that we are using in our views. By importing this namespace here, we can use the Person class in any view without having to import it again in each individual view.
+
+    // You can also use this file to import other namespaces, define tag helpers, or set other directives that you want to be available in all views.
+
+
+    // when a controller action returns a view, it will look for the view file in the Views folder first,
+
+    //  and then in the Shared folder if it doesn't find it in the Views folder. So if we have a view file with the same name in both folders, the one in the Views folder will be used.
+
+    // For example, if we have a view file named Index.cshtml in both the Views/Home folder and the Views/Shared folder, the one in the Views/Home folder will be used when we return View() from the HomeController's Index action.
+}
