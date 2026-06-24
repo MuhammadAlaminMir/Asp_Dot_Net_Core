@@ -1,8 +1,8 @@
 <Solution>
   <Folder Name="/8_Dependency_Injection/">
-    <Project Path="8_Dependency_Injection/8_Dependency_Injection.csproj" Id="361e8b2c-6084-46c5-9361-b496739ef6f2" />
-    <Project Path="ASP.Net.Services/ASP.Net.Services (Additional Class-Library 1).csproj" Id="a469ec4c-cf8d-44d1-9165-630b2470e892" />
-    <Project Path="ServicesContracts/ServicesContracts (Additional Class-Library 2).csproj" Id="b0a73436-75e2-42a8-ad6b-7659c288b4f6" />
+    <Project Path="8_Dependency_Injection/ASP.Net.Services/ASP.Net.Services (Additional Class-Library 1).csproj" />
+    <Project Path="8_Dependency_Injection/Dependency_Injection/Dependency_Injection.csproj" />
+    <Project Path="8_Dependency_Injection/ServicesContracts/ServicesContracts (Additional Class-Library 2).csproj" />
   </Folder>
   <Project Path="1_HTTP/1_HTTP.csproj" />
   <Project Path="2_Middleware/2_Middleware.csproj" />
