@@ -1,12 +1,11 @@
 using ASP.Net.Services;
-using Autofac;
 
 // using Autofac.Extensions.DependencyInjection;
 using ServicesContracts;
 
 var builder = WebApplication.CreateBuilder(args);
 // here we are telling the builder to use Autofac as the service provider factory.
-//builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()); this line is importand but somehow not working at this time, so we will use the below line instead of this line.
+//builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()); this line is important but somehow not working at this time, so we will use the below line instead of this line.
 
 builder.Services.AddControllersWithViews();
 
@@ -39,14 +38,15 @@ builder.Services.Add(new ServiceDescriptor(
 
 
 // Autofac is an open-source dependency injection (DI) container for .NET applications. It provides a way to manage the creation and lifetime of objects and their dependencies, making it easier to build loosely coupled and maintainable applications. Autofac allows developers to register components, specify their dependencies, and resolve them at runtime, promoting the principles of inversion of control (IoC) and dependency injection (DI).
-// configure Autofac as the service provider factory
-builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
-{
-    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().InstancePerDependency(); // method for per instance per dependency (transient)
-    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().InstancePerLifetimeScope(); // method for every instance per lifetime scope (scoped)
-    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().SingleInstance(); // method for single instance (singleton)
 
-});
+// configuring Autofac as the service provider factory
+//builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+//{
+//    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().InstancePerDependency(); // method for per instance per dependency (transient)
+//    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().InstancePerLifetimeScope(); // method for every instance per lifetime scope (scoped)
+//    containerBuilder.RegisterType<CitiesService>().As<ICitiesService>().SingleInstance(); // method for single instance (singleton)
+
+//});
 
 
 
