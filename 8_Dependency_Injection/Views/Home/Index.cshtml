@@ -1,13 +1,15 @@
 ﻿@model IEnumerable<string>
+@inject ICitiesService citiesServiceView;
 @{
     ViewBag.Title = "Home";
+    List<string> cities = citiesServiceView.GetCities();
 
 }
 
 <h2> This is home</h2>
 
 <ul class="list">
-    @foreach(string city in Model)
+    @foreach(string city in cities)
     { 
     <li>@city</li>
     }

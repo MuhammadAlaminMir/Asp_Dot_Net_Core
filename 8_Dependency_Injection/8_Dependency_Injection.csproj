@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ASP.Net.Services\ASP.Net.Services.csproj" />
-    <ProjectReference Include="..\ServicesContracts\ServicesContracts.csproj" />
+    <PackageReference Include="Autofac" Version="9.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASP.Net.Services\ASP.Net.Services (Additional Class-Library 1).csproj" />
+    <ProjectReference Include="..\ServicesContracts\ServicesContracts (Additional Class-Library 2).csproj" />
   </ItemGroup>
 
 </Project>

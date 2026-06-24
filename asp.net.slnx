@@ -7,6 +7,6 @@
   <Project Path="6_Rezor_Views/6_Razor_Views.csproj" Id="38bc0a0a-42e3-47fb-a089-83c9742fc010" />
   <Project Path="7_LayoutViews/7_LayoutViews_PartialView_ViewComponent.csproj" Id="1f63117e-817b-4209-aac4-7092df3ade96" />
   <Project Path="8_Dependency_Injection/8_Dependency_Injection.csproj" Id="361e8b2c-6084-46c5-9361-b496739ef6f2" />
-  <Project Path="ASP.Net.Services/ASP.Net.Services.csproj" Id="a469ec4c-cf8d-44d1-9165-630b2470e892" />
-  <Project Path="ServicesContracts/ServicesContracts.csproj" Id="b0a73436-75e2-42a8-ad6b-7659c288b4f6" />
+  <Project Path="ASP.Net.Services/ASP.Net.Services (Additional Class-Library 1).csproj" Id="a469ec4c-cf8d-44d1-9165-630b2470e892" />
+  <Project Path="ServicesContracts/ServicesContracts (Additional Class-Library 2).csproj" Id="b0a73436-75e2-42a8-ad6b-7659c288b4f6" />
 </Solution>

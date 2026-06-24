@@ -7,11 +7,12 @@ namespace _8_Dependency_Injection.Controllers
     {
         private readonly ICitiesService _citiesService;
 
+
         // here we are receiving the IOC container object of ICitiesService, which is CitiesService object. 
         // This is called constructor injection
         public HomeController(ICitiesService citiesService)
         {
-            //_citiesService = new CitiesService();
+            
             _citiesService = citiesService;
         }
 
