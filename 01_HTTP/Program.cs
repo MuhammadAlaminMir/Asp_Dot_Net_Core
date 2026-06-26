@@ -21,10 +21,11 @@ app.Run(async (HttpContext context) =>
     string method = context.Request.Method;
 
     // Set the response content type to HTML and write the path and method to the response
-    context.Response.Headers["Content-type"] = "text/html";
+    //context.Response.Headers["Content-type"] = "text/html";
     // Write the path and method to the response
     await context.Response.WriteAsync($"<p>{path}</p>");
     await context.Response.WriteAsync($"<p>{method}</p>");
+   
 
     // You can also check for custom headers, such as an "AuthorizationKey" header
     if (context.Request.Headers.ContainsKey("AuthorizationKey"))
