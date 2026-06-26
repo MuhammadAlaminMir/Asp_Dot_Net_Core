@@ -4,6 +4,7 @@
     <Project Path="8_Dependency_Injection/Dependency_Injection/Dependency_Injection.csproj" />
     <Project Path="8_Dependency_Injection/ServicesContracts/ServicesContracts (Additional Class-Library 2).csproj" />
   </Folder>
+  <Project Path="10_HttpClient_Examples/10_HttpClient_Examples.csproj" Id="10bd60f7-9ca8-4e71-bb68-bb26a17350f6" />
   <Project Path="1_HTTP/1_HTTP.csproj" />
   <Project Path="2_Middleware/2_Middleware.csproj" />
   <Project Path="3_Routing/3_Routing.csproj" />
@@ -11,4 +12,5 @@
   <Project Path="5_Model_Binding_and_Validations/5_Model_Binding_and_Validations.csproj" Id="750e6e1e-b755-4289-899c-b8a4f41aaa41" />
   <Project Path="6_Rezor_Views/6_Razor_Views.csproj" Id="38bc0a0a-42e3-47fb-a089-83c9742fc010" />
   <Project Path="7_LayoutViews/7_LayoutViews_PartialView_ViewComponent.csproj" Id="1f63117e-817b-4209-aac4-7092df3ade96" />
+  <Project Path="9_Configuration/9_Configuration.csproj" Id="3ce5015e-946c-4135-9af5-79d0511ec19f" />
 </Solution>
